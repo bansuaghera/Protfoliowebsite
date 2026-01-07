@@ -1,0 +1,36 @@
+.experience-section {
+    padding: 80px 0;
+}
+
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    padding: 40px;
+    border-left: 4px solid var(--accent-primary);
+}
+
+.exp-role {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.exp-company {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.exp-tech {
+    color: var(--accent-primary);
+    font-family: monospace;
+    margin-bottom: 10px;
+}
+
+.exp-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}

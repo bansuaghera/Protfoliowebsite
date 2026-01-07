@@ -1,0 +1,126 @@
+.about-section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    align-items: center;
+}
+
+.about-img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.about-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-self: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 4px solid var(--accent-primary);
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(3, 140px);
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.about-box:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.about-icon {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+}
+
+.about-title {
+    font-size: 0.9rem;
+    /* Smaller font for title */
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.about-subtitle {
+    font-size: 0.8rem;
+    /* Even smaller for caption */
+    color: var(--text-secondary);
+}
+
+.about-description {
+    padding: 0 0 2rem 0;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+
+    .about-img-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .about-info {
+        justify-content: center;
+        /* Center cards on mobile */
+        grid-template-columns: repeat(3, 1fr);
+        /* Responsive columns */
+        max-width: 500px;
+        margin: 0 auto 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-info {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        /* Stack if too small */
+    }
+
+    .about-img {
+        width: 250px;
+    }
+}
