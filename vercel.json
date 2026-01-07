@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd Protfolio && npm install && npm run build",
+  "outputDirectory": "Protfolio/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
