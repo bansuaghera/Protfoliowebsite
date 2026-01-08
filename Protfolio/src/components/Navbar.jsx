@@ -14,17 +14,17 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'About', href: '#about' },
         { name: 'Skills', href: '#skills' },
         { name: 'Projects', href: '#projects' },
         { name: 'Experience', href: '#experience' },
+        { name: 'Education', href: '#education' },
         { name: 'Contact', href: '#contact' },
     ];
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-content">
-                <a href="#" className="logo">Bansi.</a>
+                <a href="#" className="logo">AGHERA BANSHI.</a>
 
                 <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
                     {navLinks.map((link) => (

@@ -6,7 +6,6 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container footer-container">
-                <h1 className="footer-title">Bansi</h1>
 
                 <ul className="footer-list">
                     <li>
@@ -30,7 +29,7 @@ const Footer = () => {
                 </div>
 
                 <span className="footer-copy">
-                    &#169; {new Date().getFullYear()} Bansi Amrutlal Aghera. All rights reserved.
+                    &#169; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
                 </span>
             </div>
         </footer>

@@ -1,178 +1,183 @@
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3rem;
-    padding-bottom: 3rem;
+.contact-section {
+    padding: 80px 0;
 }
 
-.contact-title {
-    text-align: center;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(17, 25, 40, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
 }
 
 .contact-info {
+    flex: 1;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
 }
 
-.contact-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 0.75rem;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.3s;
+.contact-info-header {
+    margin-bottom: 30px;
 }
 
-.contact-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-primary);
-}
-
-.contact-card-icon {
-    font-size: 2rem;
-    color: var(--accent-primary);
-    margin-bottom: 0.25rem;
-}
-
-.contact-card-title,
-.contact-card-data {
-    font-size: 0.875rem;
-}
-
-.contact-card-title {
-    font-weight: 500;
-    margin-bottom: 0.25rem;
+.contact-title {
+    font-size: 1.8rem;
     color: var(--text-primary);
+    margin-bottom: 10px;
 }
 
-.contact-card-data {
-    display: block;
-    margin-bottom: 0.75rem;
+.contact-subtitle {
+    font-size: 0.9rem;
     color: var(--text-secondary);
 }
 
-.contact-button {
-    color: var(--accent-primary);
-    font-size: 0.875rem;
-    display: inline-flex;
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    column-gap: 0.25rem;
+    gap: 15px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     cursor: pointer;
-    transition: 0.3s;
+    text-decoration: none;
 }
 
-.contact-button:hover {
-    transform: translateX(0.25rem);
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
 }
 
+.contact-card-icon {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    background: rgba(100, 255, 218, 0.1);
+    /* fallback accent color logic */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.contact-card-content h3 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.contact-card-content span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Right Side - Form */
 .contact-content {
-    /* Right side container styles if needed */
+    flex: 1.5;
+    padding: 40px;
 }
 
 .contact-form {
-    width: 360px;
+    width: 100%;
 }
 
 .contact-form-div {
+    margin-bottom: 20px;
     position: relative;
-    margin-bottom: 2rem;
-    height: 4rem;
+}
+
+.contact-form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 .contact-form-input {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    background: none;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
     color: var(--text-primary);
-    outline: none;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    z-index: 1;
-    transition: 0.3s;
     font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: inherit;
+}
+
+.contact-form-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .contact-form-input:focus {
     border-color: var(--accent-primary);
-}
-
-.contact-form-area {
-    height: 11rem;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.1);
 }
 
 .contact-form-area textarea {
+    height: 150px;
     resize: none;
 }
 
-.contact-form-tag {
-    position: absolute;
-    top: -0.75rem;
-    left: 1.25rem;
-    font-size: 0.85rem;
-    padding: 0.25rem;
-    background-color: var(--bg-color);
-    /* Important: needs to match section bg */
-    color: var(--text-secondary);
-    z-index: 10;
-    transition: 0.3s;
-}
-
-.contact-form-input:focus+.contact-form-tag {
-    color: var(--accent-primary);
-}
-
 .contact-button-submit {
-    border: none;
-    outline: none;
-    font-family: inherit;
-    font-size: 1.1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-    width: fit-content;
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    background-color: var(--accent-primary);
-    color: #fff;
+    gap: 10px;
+    padding: 15px 30px;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    /* Assuming bg-primary is dark, so text should be dark if accent is bright, or white if accent is dark. 
+       Usually accent is bright teal/green. */
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
 }
 
 .contact-button-submit:hover {
-    background-color: var(--accent-secondary);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
 }
 
-@media screen and (max-width: 992px) {
-    .contact-container {
-        column-gap: 1.5rem;
-    }
+.contact-button-submit svg {
+    transition: transform 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
+.contact-button-submit:hover svg {
+    transform: translateX(5px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
     .contact-container {
-        grid-template-columns: 1fr;
-        row-gap: 3rem;
+        flex-direction: column;
+        gap: 0;
     }
 
     .contact-info {
-        justify-content: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px;
     }
 
-    .contact-form {
-        margin: 0 auto;
-        width: 100%;
+    .contact-content {
+        padding: 30px;
     }
 }

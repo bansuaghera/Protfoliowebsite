@@ -23,7 +23,7 @@ import care8 from './assets/projects/care-8.png';
 import care9 from './assets/projects/care-9.png';
 
 export const personalInfo = {
-    name: "Bansi Amrutlal Aghera",
+    name: "AGHERA BANSHI",
     title: "Flutter & Web Developer | Computer Engineering Student",
     typingEffectSource: "https://readme-typing-svg.demolab.com/?lines=Flutter+Developer;B2C+App+Developer;Web+Developer&center=true&width=420&height=40",
     about: [
@@ -69,7 +69,8 @@ export const projects = [
             { src: care7, caption: "Order Details & Status Update" },
             { src: care8, caption: "Create New User" },
             { src: care9, caption: "Add Product Form" }
-        ]
+        ],
+        github: "https://github.com/bansuaghera"
     },
     {
         id: 2,
@@ -85,7 +86,8 @@ export const projects = [
             { src: bus5, caption: "Attendance Dashboard" },
             { src: bus6, caption: "Admin Portal" },
             { src: bus7, caption: "Manage Students" }
-        ]
+        ],
+        github: "https://github.com/bansuaghera"
     },
 
 
@@ -102,7 +104,8 @@ export const projects = [
             { src: ecommerce3, caption: "Featured Products" },
             { src: ecommerce4, caption: "Orders & Favorites" },
             { src: ecommerce5, caption: "Admin Dashboard" }
-        ]
+        ],
+        github: "https://github.com/bansuaghera"
     }
 
 ];
@@ -153,5 +156,29 @@ export const achievements = [
         title: "Runner Up - Mobile App Development",
         description: "Secured 2nd position in University Level Mobile Application Development competition using Flutter.",
         icon: "🏆"
+    }
+];
+
+export const education = [
+    {
+        id: 1,
+        degree: "B.Tech in Computer Engineering",
+        institution: "RK University",
+        year: "Pursuing",
+        description: "Currently pursuing Bachelor of Technology."
+    },
+    {
+        id: 2,
+        degree: "Diploma in Information Technology",
+        institution: "L.E. College (Diploma), Morbi",
+        year: "Completed",
+        description: "Completed Diploma Information Technology."
+    },
+    {
+        id: 3,
+        degree: "SSC",
+        institution: "Gyanjyot Vidhyalay",
+        year: "Completed",
+        description: "Secondary School."
     }
 ];
